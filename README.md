@@ -11,7 +11,7 @@ Jeu de vaisseau spatial en **3D**, jouable dans le navigateur et contrôlé par 
 
 ## Aperçu
 
-- Rendu **3D** avec Three.js (vaisseau, astéroïdes, projectiles, explosions)
+- Rendu **3D** avec Three.js (vaisseau, astéroïdes)
 - Contrôle **gestuel** via MediaPipe Hands (2 mains)
 - **Fallback clavier** si la caméra est indisponible
 - 3 vies, score progressif, difficulté croissante
@@ -21,8 +21,7 @@ Jeu de vaisseau spatial en **3D**, jouable dans le navigateur et contrôlé par 
 | Main | Geste | Action |
 |---|---|---|
 | **Gauche** | Main ouverte, doigts pointés | Piloter le vaisseau |
-| **Droite** | Index + majeur tendus, replier le pouce | Tirer |
-| **Clavier** | `←` `→` `↑` `↓` + `Espace` | Fallback |
+| **Clavier** | `←` `→` `↑` `↓` | Fallback |
 
 > Les labels Gauche/Droite à l'écran sont inversés par rapport à la caméra miroir — les mécaniques restent cohérentes.
 
@@ -33,8 +32,16 @@ Un serveur HTTP local est requis (la caméra ne fonctionne pas en `file://`).
 ```bash
 git clone https://github.com/raniaXdaoudi/space-hand-pilot-3d.git
 cd space-hand-pilot-3d
+make run
+```
+
+Ou sans Make :
+
+```bash
 python3 -m http.server 8000
 ```
+
+Si le port 8000 est occupé : `make stop` puis `make run`, ou `PORT=8080 make run`.
 
 Puis ouvrir **http://localhost:8000** et autoriser l'accès à la caméra.
 
@@ -63,7 +70,6 @@ space-hand-pilot-3d/
 ## Règles du jeu
 
 - Évitez les astéroïdes qui arrivent du haut et de la droite
-- Détruisez-les en tirant (+25 points par astéroïde)
 - Le score augmente avec le temps
 - 3 vies — Game Over quand elles sont épuisées
 
