@@ -21,7 +21,7 @@ Jeu de vaisseau spatial en **3D**, jouable dans le navigateur et contrôlé par 
 | Main | Geste | Action |
 |---|---|---|
 | **Gauche** | Main ouverte, doigts pointés | Piloter le vaisseau |
-| **Clavier** | `←` `→` `↑` `↓` | Fallback |
+| **Clavier** | `←` `→` `↑` `↓` | space |
 
 > Les labels Gauche/Droite à l'écran sont inversés par rapport à la caméra miroir — les mécaniques restent cohérentes.
 
